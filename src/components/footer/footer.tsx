@@ -62,6 +62,24 @@ export default function Footer() {
             {links.map(({ header, elements }) => (
               <FooterLinks header={header} elements={elements} />
             ))}
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                alignSelf: "start",
+                gap: 8,
+              }}
+            >
+              <img
+                src="assets/reviews-icons.png"
+                width={120}
+                height="auto"
+                style={{ objectFit: "contain" }}
+              />
+              <span style={{ fontWeight: 400, color: "#c0c1c6" }}>
+                Trustpilot Reviews
+              </span>
+            </div>
           </div>
         </div>
         <p className={styles.footerDisclaimerText}>
