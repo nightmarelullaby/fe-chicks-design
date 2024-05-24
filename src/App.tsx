@@ -14,7 +14,7 @@ function App() {
               style={{
                 filter: "brightness(1) opacity(0.18) hue-rotate(22deg)",
               }}
-              src={"https://fe-chicks-design.vercel.app/public/background1.png"}
+              src={"background1.png"}
             />
           </div>
           <MainSection />
