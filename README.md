@@ -15,4 +15,4 @@ This design is part of skill test.
 
 ---
 
-### 🚀 [Live Demo](fe-chicks-design.vercel.app "https://fe-chicks-design.vercel.app")
+### 🚀 [Live Demo](https://fe-chicks-design.vercel.app "https://fe-chicks-design.vercel.app")
