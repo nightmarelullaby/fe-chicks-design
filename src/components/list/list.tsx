@@ -4,11 +4,7 @@ import { ShoppingCartIcon } from "@heroicons/react/24/solid";
 import styles from "./list.module.css";
 import { ListCardTypes, ListRenderTypes } from "./list.types";
 export default function ListContainer(props: React.PropsWithChildren) {
-  return (
-    <div className={styles.listContainer} style={{}}>
-      {props.children}
-    </div>
-  );
+  return <div className={styles.listContainer}>{props.children}</div>;
 }
 
 export function ListRender({ children, ...style }: ListRenderTypes) {
@@ -28,6 +24,7 @@ export function ListCard({
   title,
   productImage,
   price,
+  prevPrice,
   description,
 }: ListCardTypes) {
   return (
@@ -37,7 +34,7 @@ export function ListCard({
           <div style={{ display: "flex", alignItems: "center", gap: 4 }}>
             <div
               style={{
-                backgroundColor: "#4dff71",
+                backgroundColor: "#39e29d",
                 width: 4,
                 height: 4,
                 borderRadius: 100,
@@ -51,10 +48,10 @@ export function ListCard({
             <span
               style={{
                 borderRadius: 4,
-                border: "1px solid lightgreen",
+                border: "1px solid #39e29d",
                 padding: "4px 8px",
                 fontSize: 14,
-                color: "lightgreen",
+                color: "#39e29d",
               }}
             >
               In stock
@@ -72,9 +69,33 @@ export function ListCard({
         }}
       >
         {productImage}
-
-        <h4 style={{ fontWeight: 400 }}>{title}</h4>
-        <span style={{ fontWeight: 500 }}>{formatCountryCurrency(price)}</span>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+          }}
+        >
+          <h4 style={{ fontWeight: 400 }}>{title}</h4>
+          <img src="assets/game-logo.png" width={32} height="auto" />
+        </div>
+        <div>
+          <span style={{ fontWeight: 500, marginRight: 8 }}>
+            {formatCountryCurrency(price)}
+          </span>
+          <small>
+            <span
+              style={{
+                textDecoration: "line-through",
+                color: "lightgray",
+                textDecorationThickness: 1.5,
+                textDecorationColor: "red",
+              }}
+            >
+              {formatCountryCurrency(prevPrice)}
+            </span>
+          </small>
+        </div>
         <p style={{ fontWeight: 400, fontSize: 14, color: "#b0b0b0" }}>
           {description}
         </p>

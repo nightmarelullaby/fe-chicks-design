@@ -2,6 +2,7 @@ export type ListCardTypes = {
   title: string;
   productImage: React.ReactNode;
   price: number;
+  prevPrice: number;
   description: string;
 };
 

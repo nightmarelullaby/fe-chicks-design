@@ -11,66 +11,77 @@ const listItems = [
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod. ",
     price: 45000,
+    prevPrice: 50000,
   },
   {
     title: "Blue Partyhat",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod. ",
     price: 45000,
+    prevPrice: 50000,
   },
   {
     title: "Blue Partyhat",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod. ",
     price: 45000,
+    prevPrice: 50000,
   },
   {
     title: "Blue Partyhat",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod. ",
     price: 45000,
+    prevPrice: 50000,
   },
   {
     title: "Blue Partyhat",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod. ",
     price: 45000,
+    prevPrice: 50000,
   },
   {
     title: "Blue Partyhat",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod. ",
     price: 45000,
+    prevPrice: 50000,
   },
   {
     title: "Blue Partyhat",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod. ",
     price: 45000,
+    prevPrice: 50000,
   },
   {
     title: "Blue Partyhat",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod. ",
     price: 45000,
+    prevPrice: 50000,
   },
   {
     title: "Blue Partyhat",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod. ",
     price: 45000,
+    prevPrice: 50000,
   },
   {
     title: "Blue Partyhat",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod. ",
     price: 45000,
+    prevPrice: 50000,
   },
   {
     title: "Blue Partyhat",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod. ",
     price: 45000,
+    prevPrice: 50000,
   },
 ];
 export default function MainSection() {
@@ -131,6 +142,7 @@ export default function MainSection() {
               style={{
                 display: "flex",
                 flexWrap: "wrap",
+                alignItems: "center",
                 justifyContent: "space-between",
               }}
             >
@@ -145,8 +157,9 @@ export default function MainSection() {
             </div>
 
             <ListRender gap={20}>
-              {listItems.map(({ title, description, price }) => (
+              {listItems.map(({ title, description, price, prevPrice }) => (
                 <ListCard
+                  prevPrice={prevPrice}
                   title={title}
                   productImage={
                     <img

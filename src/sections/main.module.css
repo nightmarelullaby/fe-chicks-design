@@ -19,7 +19,7 @@
 .mainSection {
   color: white;
   width: clamp(200px, 80%, 1280px);
-  margin: 48px 0 0 0;
+  margin: 100px 0 0 0;
 }
 .searchBoxRightFilters {
   display: flex;
