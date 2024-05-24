@@ -13,7 +13,7 @@ export default function Header(props: React.PropsWithChildren) {
         <div className={styles.headerContainer}>
           <div className={styles.headerLogoContainer}>
             <img
-              src="/src/assets/chicks-logo-large.png"
+              src="assets/chicks-logo-large.png"
               className={styles.headerLogo}
             />
             <Divider margin="0 32px" style={{ height: 48 }} />
@@ -34,7 +34,7 @@ export default function Header(props: React.PropsWithChildren) {
             top={84.6}
             logo={
               <img
-                src="/src/assets/chicks-logo-large.png"
+                src="assets/chicks-logo-large.png"
                 className={styles.headerLogo}
               />
             }

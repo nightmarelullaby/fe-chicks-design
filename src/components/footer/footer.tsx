@@ -24,7 +24,7 @@ export default function Footer() {
           padding: "32px 0 32px 0",
         }}
       >
-        <img src="src/assets/social-media-footer.png" width={220} />
+        <img src="assets/social-media-footer.png" width={220} />
         <div
           style={{
             margin: "24px 0 ",
@@ -124,7 +124,7 @@ export function CompaniesFooterSection() {
           alignItems: "center",
         }}
       >
-        <img src="/src/assets/brands.png" width={300} />
+        <img src="assets/brands.png" width={300} />
         <span style={{ color: "lightgray" }}>and 50+ more</span>
       </div>
     </section>

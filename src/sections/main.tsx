@@ -150,7 +150,7 @@ export default function MainSection() {
                   title={title}
                   productImage={
                     <img
-                      src="/src/assets/item.png"
+                      src="assets/item.png"
                       style={{
                         width: 48,
                       }}
