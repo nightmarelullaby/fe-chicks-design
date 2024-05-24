@@ -12,10 +12,12 @@ export default function Header(props: React.PropsWithChildren) {
       <div style={{ position: "relative" }}>
         <div className={styles.headerContainer}>
           <div className={styles.headerLogoContainer}>
-            <img
-              src="assets/chicks-logo-large.png"
-              className={styles.headerLogo}
-            />
+            <a href="#BLANK">
+              <img
+                src="assets/chicks-logo-large.png"
+                className={styles.headerLogo}
+              />
+            </a>
             <Divider margin="0 32px" style={{ height: 48 }} />
           </div>
           <div className={styles.responsiveMenu}>
