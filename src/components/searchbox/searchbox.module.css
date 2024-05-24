@@ -1,0 +1,23 @@
+.searchbox {
+  flex-grow: 1;
+  background-color: transparent;
+  border: none;
+  padding: 24px 0px;
+  color: white;
+}
+.searchbox::placeholder {
+  color: gray;
+}
+.searchboxContainer {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #373a4f8a;
+}
+.searchbox:focus {
+  border: none;
+  outline: none;
+  border-color: inherit;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}

@@ -1,0 +1,43 @@
+.headerList {
+  list-style-type: none;
+  display: flex;
+}
+.headerList > li:not(:first-child) {
+  margin-left: 32px;
+}
+.nav {
+  display: flex;
+  flex-grow: 1;
+  padding-right: 24px;
+}
+.navbarContainer {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  width: 100%;
+}
+.mainSection {
+  color: white;
+  width: clamp(200px, 80%, 1280px);
+  margin: 48px 0 0 0;
+}
+.searchBoxRightFilters {
+  display: flex;
+  flex-wrap: wrap;
+}
+@media (max-width: 700px) {
+  .mainSection {
+    width: 90%;
+  }
+}
+@media (max-width: 1250px) {
+  /* .mainSection {
+        width: 60%;
+      } */
+  .nav {
+    margin-left: auto;
+  }
+  .headerList {
+    display: none;
+  }
+}

@@ -1,0 +1,39 @@
+.header {
+  background-color: var(--header-background);
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+}
+.headerContainer {
+  padding: 0 32px;
+  display: flex;
+  align-items: center;
+}
+
+.headerLogo {
+  width: 140px;
+  height: auto;
+  object-fit: contain;
+}
+.headerLogoContainer {
+  display: flex;
+}
+.responsiveMenu {
+  overflow: hidden;
+  display: none;
+}
+@media (max-width: 1250px) {
+  .headerLogo {
+    width: 100%;
+  }
+  .responsiveMenu {
+    display: block;
+  }
+  .headerContainer {
+    padding: 0px;
+  }
+  .headerLogoContainer {
+    display: none;
+  }
+}

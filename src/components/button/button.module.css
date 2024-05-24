@@ -1,0 +1,26 @@
+.defaultButton {
+  cursor: pointer;
+  background-color: transparent;
+  border: transparent;
+}
+
+.filledButtonText {
+  font-weight: 500;
+  color: #314d4f;
+}
+.filledButton {
+  cursor: pointer;
+  background-color: #39e29d;
+  border: transparent;
+  border-radius: 4px;
+  padding: 8px 16px;
+}
+.defaultButtonText {
+  font-weight: 400;
+  color: white;
+}
+@media (max-width: 1250px) {
+  .defaultButton {
+    display: none;
+  }
+}

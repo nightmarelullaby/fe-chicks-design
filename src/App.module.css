@@ -1,0 +1,7 @@
+.main {
+  display: flex;
+  margin-bottom: 32px;
+  margin-top: 80px;
+  position: relative;
+  justify-content: center;
+}
