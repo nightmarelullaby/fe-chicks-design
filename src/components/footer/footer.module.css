@@ -18,6 +18,13 @@
   gap: 16px;
   align-items: center;
 }
+.companiesSectionContainer {
+  background-color: #2b2c3b;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 24px 0;
+}
 .footer {
   height: 100%;
   background-color: #303141;

@@ -125,15 +125,7 @@ export function FooterLinks({
 
 export function CompaniesFooterSection() {
   return (
-    <section
-      style={{
-        backgroundColor: "#2b2c3b",
-        width: "100%",
-        display: "flex",
-        justifyContent: "center",
-        padding: "24px 0",
-      }}
-    >
+    <section className={styles.companiesSectionContainer}>
       <div className={styles.companiesContainer}>
         <img src="assets/brands.png" className={styles.companiesLogo} />
         <span style={{ color: "lightgray" }}>and 50+ more</span>

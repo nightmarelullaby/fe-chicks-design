@@ -106,7 +106,15 @@ export function ListCard({
         </button>
         <button className={styles.listCardAddButton}>
           <span style={{ color: "white", fontWeight: 500 }}>add</span>
-          <ShoppingCartIcon width={16} color="white" />
+          <div
+            style={{
+              backgroundColor: "#454da8",
+              padding: "4px 8px",
+              borderRadius: 4,
+            }}
+          >
+            <ShoppingCartIcon width={16} color="white" />
+          </div>
         </button>
       </div>
     </div>

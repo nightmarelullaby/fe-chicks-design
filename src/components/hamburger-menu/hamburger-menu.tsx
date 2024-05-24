@@ -39,20 +39,12 @@ export function SideMenu({
   top,
   elements = [{ name: "Example" }],
 }: SideMenuProps) {
-  console.log("here", open);
   return (
     <div
+      className={styles.sideMenuContainer}
       style={{
-        height: "100vh",
-        width: 250,
-        backgroundColor: "#2a2b37",
-        borderRight: "1px solid #404150",
-        borderTop: "1px solid #404150",
-        position: "fixed",
-        transform: open ? " translateX(0%)" : "translateX(-100%)",
-
         top,
-        left: 0,
+        transform: open ? "translateX(0%)" : "translateX(-100%)",
       }}
     >
       {logo}
