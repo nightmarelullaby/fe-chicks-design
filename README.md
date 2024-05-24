@@ -1,30 +1,54 @@
-# React + TypeScript + Vite
+# Design for ChicksGold
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### About
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Setup
 
-## Expanding the ESLint configuration
+1. Clone repo: `git clone https://github.com/nightmarelullaby/fe-chicks-design.git`
+2. Access folder `cd fe-chicks-design`
+3. Install dependencies `npm i`
+4. Run in local using `npm run dev`
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+---
 
-- Configure the top-level `parserOptions` property like this:
+### Live Demo 🚀 [water-pouring-puzzle-nine.vercel.app](fe-chicks-design.vercel.app "https://fe-chicks-design.vercel.app")
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+---
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### Tests
+
+Once you install all dependencies you can make `npm run vitest`. This will run several unit tests.
+
+---
+
+### Limitations
+
+- Allowed actions: **Fill, Empty, Transfer(between two jugs only)**
+- X,Y and Z are greater than 0
+- X, Y and Z are integer (no decimals, fractions)
+
+---
+
+### Algorith approach
+
+There are several ways to solve this problem. I used a basic algorithm wich follows the instructions:
+
+- Fill the Y jug and pour it into X jug.
+- If Y jug is empty fill it.
+- If X jug is full, empty it.
+- Repeat
+
+This will eventually find a path to desired amount, but depending on the choosen jug would be more efficient or not.
+
+So, in the code there are 2 functions pouringPathFinder `pouringPathFinder()` and `
+findOptimalPath()` . The second one runs twice the first function and checks wich output has smaller output size and return it.
+
+##### Example
+
+X = 10;
+Y = 2;
+Z = 4;
+
+`(0,0) - (0,2) - (2,0) - (2,2) - (4,0)`
