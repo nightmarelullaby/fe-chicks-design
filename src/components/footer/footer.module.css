@@ -8,6 +8,16 @@
   text-align: center;
   color: #cbcbcf;
 }
+.companiesLogo {
+  width: 300px;
+}
+.companiesContainer {
+  flex-wrap: wrap;
+  width: clamp(800px, 80%, 1280px);
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
 .footer {
   height: 100%;
   background-color: #303141;
@@ -15,6 +25,9 @@
   flex-direction: column;
 }
 @media (max-width: 900px) {
+  .companiesLogo {
+    width: 180px;
+  }
   .categories {
     margin-top: 24px;
   }

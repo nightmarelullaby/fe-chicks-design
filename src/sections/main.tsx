@@ -1,7 +1,11 @@
 import ListContainer, { ListCard, ListRender } from "../components/list/list";
 import Select from "../components/select/select";
 import { PuzzlePieceIcon } from "@heroicons/react/24/outline";
-import { CurrencyDollarIcon } from "@heroicons/react/24/solid";
+import {
+  AdjustmentsHorizontalIcon,
+  CurrencyDollarIcon,
+  TagIcon,
+} from "@heroicons/react/24/solid";
 import Searchbox from "../components/searchbox/searchbox";
 import styles from "./main.module.css";
 import Pagination from "../components/pagination/pagination";
@@ -118,7 +122,7 @@ export default function MainSection() {
                       flexGrow: 1,
                       maxWidth: "100%",
                     }}
-                    leftIcon={<CurrencyDollarIcon width={28} color="#39e29d" />}
+                    leftIcon={<TagIcon width={28} color="#39e29d" />}
                     variant="withIcon"
                     defaultText="All"
                     subheader="Item type"
@@ -146,33 +150,48 @@ export default function MainSection() {
                 justifyContent: "space-between",
               }}
             >
-              <h4 style={{ fontWeight: 300 }}>Showing 20 - from 125</h4>
-              <Select
-                style={{ backgroundColor: "#353a4f" }}
-                leftIcon={<CurrencyDollarIcon width={28} color="#39e29d" />}
-                variant="withIcon"
-                subheader="Price"
-                defaultText="All"
-              />
+              <div className={styles.sortBySection}>
+                <h4 style={{ fontWeight: 300 }}>Showing 20 - from 125</h4>
+                <div className={styles.sortByResponsive}>
+                  <Select
+                    style={{
+                      width: "100%",
+                      gap: "inherit",
+                      backgroundColor: "#353a4f",
+                    }}
+                    leftIcon={
+                      <AdjustmentsHorizontalIcon width={28} color="#39e29d" />
+                    }
+                    variant="withIcon"
+                    subheader="Sort By"
+                    defaultText="Featured"
+                  />
+                </div>
+              </div>
             </div>
 
             <ListRender gap={20}>
-              {listItems.map(({ title, description, price, prevPrice }) => (
-                <ListCard
-                  prevPrice={prevPrice}
-                  title={title}
-                  productImage={
-                    <img
-                      src="assets/item.png"
-                      style={{
-                        width: 48,
-                      }}
-                    />
-                  }
-                  description={description}
-                  price={price}
-                />
-              ))}
+              {listItems.map(
+                ({ title, description, price, prevPrice }, index) => (
+                  // <div style={{ flexBasis: "200px" }}>
+                  <ListCard
+                    key={index}
+                    prevPrice={prevPrice}
+                    title={title}
+                    productImage={
+                      <img
+                        src="assets/item.png"
+                        style={{
+                          width: 48,
+                        }}
+                      />
+                    }
+                    description={description}
+                    price={price}
+                  />
+                  // </div>
+                )
+              )}
             </ListRender>
             <div style={{ alignSelf: "center" }}>
               <Pagination pages={[1, 2, 3, 4, 5, 6]}></Pagination>

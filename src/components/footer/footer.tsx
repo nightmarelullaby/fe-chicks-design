@@ -60,7 +60,7 @@ export default function Footer() {
           </div>
           <div className={styles.categories}>
             {links.map(({ header, elements }) => (
-              <FooterLinks header={header} elements={elements} />
+              <FooterLinks key={header} header={header} elements={elements} />
             ))}
             <div
               style={{
@@ -134,15 +134,8 @@ export function CompaniesFooterSection() {
         padding: "24px 0",
       }}
     >
-      <div
-        style={{
-          width: "clamp(800px,80%,1280px)",
-          display: "flex",
-          gap: 16,
-          alignItems: "center",
-        }}
-      >
-        <img src="assets/brands.png" width={300} />
+      <div className={styles.companiesContainer}>
+        <img src="assets/brands.png" className={styles.companiesLogo} />
         <span style={{ color: "lightgray" }}>and 50+ more</span>
       </div>
     </section>

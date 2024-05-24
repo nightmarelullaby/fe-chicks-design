@@ -27,7 +27,9 @@ export default function Pagination({ pages = [1, 2, 3, 4] }: PaginationType) {
       >
         <PaginationPage active={true} text={"1"} />
         {pages.slice(1).map((page) => (
-          <PaginationPage text={page} />
+          <div key={page}>
+            <PaginationPage text={page} />
+          </div>
         ))}
       </div>
       <button className={styles.buttons}>

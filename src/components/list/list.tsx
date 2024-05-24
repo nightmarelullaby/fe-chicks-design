@@ -28,7 +28,7 @@ export function ListCard({
   description,
 }: ListCardTypes) {
   return (
-    <div className={styles.listCardContainer} style={{}}>
+    <div className={styles.listCardContainer}>
       <div style={{ display: "flex" }}>
         <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
           <div style={{ display: "flex", alignItems: "center", gap: 4 }}>

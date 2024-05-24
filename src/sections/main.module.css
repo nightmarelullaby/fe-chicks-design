@@ -10,6 +10,13 @@
   flex-grow: 1;
   padding-right: 24px;
 }
+.sortBySection {
+  display: flex;
+  flex-grow: 1;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
 .navbarContainer {
   display: flex;
   align-items: center;
@@ -25,9 +32,20 @@
   display: flex;
   flex-wrap: wrap;
 }
+.sortByResponsive {
+  width: 200px;
+  gap: 20px;
+}
 @media (max-width: 700px) {
+  .sortByResponsive {
+    width: 100%;
+  }
   .mainSection {
     width: 90%;
+  }
+  .sortBySection {
+    flex-wrap: wrap;
+    gap: 32px;
   }
 }
 @media (max-width: 1250px) {

@@ -16,7 +16,7 @@ export default function Navigation() {
       <div className={styles.navbarContainer}>
         <ul className={styles.headerList}>
           {menuNavigation.map(({ name }) => (
-            <li>
+            <li key={name}>
               <Dropdown text={name} />
             </li>
           ))}

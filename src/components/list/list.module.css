@@ -11,6 +11,8 @@
 }
 .listRender {
   border-radius: 4px;
+  /* display: flex; */
+  /* flex-wrap: wrap; */
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   list-style-type: none;
@@ -52,4 +54,15 @@
 }
 .inputNumber {
   -moz-appearance: textfield;
+}
+
+@media (max-width: 574px) {
+  .listRender {
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  }
+}
+@media (max-width: 574px) {
+  .listRender {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
 }

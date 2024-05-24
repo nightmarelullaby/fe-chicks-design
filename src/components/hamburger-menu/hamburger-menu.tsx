@@ -65,7 +65,7 @@ export function SideMenu({
         }}
       >
         {elements.map((el: ElementsType) => (
-          <a style={{ cursor: "pointer", padding: "16px 0" }}>
+          <a key={el.name} style={{ cursor: "pointer", padding: "16px 0" }}>
             <li key={el.name}>
               <div
                 style={{

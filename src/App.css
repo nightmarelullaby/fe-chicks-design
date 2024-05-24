@@ -2,7 +2,9 @@
   --text-heading: 48px;
   --header-background: #303141;
 }
-
+* {
+  box-sizing: border-box;
+}
 body {
   background-color: #38394d;
 }
