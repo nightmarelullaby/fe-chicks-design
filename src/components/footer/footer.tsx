@@ -49,7 +49,7 @@ export default function Footer() {
             }}
           >
             <img
-              src="/src/assets/chicks-logo-large.png"
+              src="assets/chicks-logo-large.png"
               style={{
                 width: "200px",
                 height: "auto",
