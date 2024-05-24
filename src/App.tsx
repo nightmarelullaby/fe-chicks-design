@@ -1,5 +1,5 @@
 import "./App.css";
-import GlobalLayout from "./components/global-layout/layout";
+import GlobalLayout from "./layouts/global-layout/layout";
 import BackgroundImage from "./components/background-image/background-image";
 import MainSection from "./sections/main";
 import styles from "./App.module.css";
