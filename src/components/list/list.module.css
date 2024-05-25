@@ -57,6 +57,9 @@
 }
 
 @media (max-width: 574px) {
+  .listContainer {
+    padding: 24px;
+  }
   .listRender {
     grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
   }
